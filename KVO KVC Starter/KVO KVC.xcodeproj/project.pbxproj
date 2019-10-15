@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33D1EA242356415100EF7867 /* LSIIRS.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D1EA232356415100EF7867 /* LSIIRS.m */; };
 		BD4087FB225CE26300B9C013 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4087FA225CE26300B9C013 /* AppDelegate.m */; };
 		BD408801225CE26300B9C013 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD4087FF225CE26300B9C013 /* Main.storyboard */; };
 		BD408803225CE26400B9C013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD408802225CE26400B9C013 /* Assets.xcassets */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33D1EA222356415100EF7867 /* LSIIRS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIIRS.h; sourceTree = "<group>"; };
+		33D1EA232356415100EF7867 /* LSIIRS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIIRS.m; sourceTree = "<group>"; };
 		BD4087F6225CE26300B9C013 /* KVO KVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KVO KVC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD4087F9225CE26300B9C013 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BD4087FA225CE26300B9C013 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -83,6 +86,8 @@
 			children = (
 				BD4087FC225CE26300B9C013 /* ViewController.h */,
 				BD408818225CE28900B9C013 /* ViewController.m */,
+				33D1EA222356415100EF7867 /* LSIIRS.h */,
+				33D1EA232356415100EF7867 /* LSIIRS.m */,
 				BD408811225CE27500B9C013 /* LSIDepartment.h */,
 				BD408812225CE27500B9C013 /* LSIDepartment.m */,
 				BD40880F225CE27500B9C013 /* LSIEmployee.h */,
@@ -171,6 +176,7 @@
 				BD408815225CE27500B9C013 /* LSIDepartment.m in Sources */,
 				BD408816225CE27500B9C013 /* LSIEmployee.m in Sources */,
 				BD4087FB225CE26300B9C013 /* AppDelegate.m in Sources */,
+				33D1EA242356415100EF7867 /* LSIIRS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

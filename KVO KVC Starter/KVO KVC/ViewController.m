@@ -10,11 +10,13 @@
 #import "LSIDepartment.h"
 #import "LSIEmployee.h"
 #import "LSIHRController.h"
+#import "LSIIRS.h"
 
 
 @interface ViewController ()
 
 @property (nonatomic) LSIHRController *hrController;
+@property (nonatomic) LSIIRS *irs;
 
 @end
 
@@ -89,6 +91,11 @@
 
 	// Combine into one array: NSArray<LSIEmployee *>
 	NSLog(@"departments.employees: %@", [self.hrController valueForKeyPath:@"departments.@unionOfArrays.employees"]);
+
+	// start tracking phil
+
+	self.irs = [[LSIIRS alloc] init];
+	[self.irs startMonitoringEmployee:philSchiller];
 }
 
 
@@ -100,7 +107,6 @@
 
 	NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
 	formatter.numberStyle = NSNumberFormatterCurrencyStyle;
-	NSLog(@"Phil's salary: %@", [formatter stringFromNumber:@(phil.salary)]);
 }
 
 
