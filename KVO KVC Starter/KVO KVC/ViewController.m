@@ -77,6 +77,18 @@
 	[philSchiller setValue:@"Philip" forKey:@"name"];
 	name = [philSchiller valueForKey:@"name"];
 	NSLog(@"name: %@", name);
+
+	NSLog(@"AllEmployees: %@", self.hrController.allEmployees);
+
+	NSLog(@"All: %@", [self.hrController valueForKey:@"allEmployees"]);
+	
+	NSLog(@"Departments: %@", [self.hrController valueForKeyPath:@"departments"]);
+
+	// NSArray of NSArrays of LSIEmployee (NSArray <NSArray<LSIEmployee *> *> *)
+	NSLog(@"departments.employees: %@", [self.hrController valueForKeyPath:@"departments.employees"]);
+
+	// Combine into one array: NSArray<LSIEmployee *>
+	NSLog(@"departments.employees: %@", [self.hrController valueForKeyPath:@"departments.@unionOfArrays.employees"]);
 }
 
 

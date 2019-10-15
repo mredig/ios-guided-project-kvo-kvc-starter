@@ -8,6 +8,7 @@
 
 #import "LSIHRController.h"
 #import "LSIDepartment.h"
+#import "LSIEmployee.h"
 
 @interface LSIHRController ()
 
@@ -56,5 +57,19 @@
 	return allEmployees;
 }
 
+- (NSInteger)highestPaidEmployee {
+    LSIEmployee *highestPaid = nil;
+    for (LSIEmployee *employee in self.allEmployees) {
+        if (employee.salary > highestPaid.salary) {
+            highestPaid = employee;
+        }
+    }
+    return highestPaid.salary;
+}
+
+// key value option
+//- (NSInteger)highestSalary {
+//    return [[[self valueForKeyPath:@"departments.@unionOfArrays.employees"] valueForKeyPath:@"@max.salary"] integerValue];
+//}
 
 @end

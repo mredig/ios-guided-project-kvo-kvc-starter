@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)addDepartment:(LSIDepartment *)department;
 
 - (NSArray<LSIEmployee *> *)allEmployees;
+- (NSInteger)highestPaidEmployee;
 
 @end
 
