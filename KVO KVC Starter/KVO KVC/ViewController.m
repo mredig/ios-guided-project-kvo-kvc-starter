@@ -92,6 +92,16 @@
 }
 
 
+- (IBAction)givePhilARaisePressed:(UIButton *)sender {
+	NSPredicate *nameIsPhilPredicate = [NSPredicate predicateWithFormat:@"name == %@", @"Philip"];
+	LSIEmployee *phil = [[self.hrController.allEmployees filteredArrayUsingPredicate:nameIsPhilPredicate] firstObject];
+
+	phil.salary += 7000000;
+
+	NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+	formatter.numberStyle = NSNumberFormatterCurrencyStyle;
+	NSLog(@"Phil's salary: %@", [formatter stringFromNumber:@(phil.salary)]);
+}
 
 
 @end
