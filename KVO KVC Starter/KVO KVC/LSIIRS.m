@@ -31,9 +31,10 @@
 }
 
 - (void)stopMonitoringEmployee:(LSIEmployee *)employee {
-	[employee removeObserver:self forKeyPath:@"salary" context:NULL];
-
-	[self.monitoredEmployees removeObject:employee];
+	if ([self.monitoredEmployees containsObject:employee]) {
+		[employee removeObserver:self forKeyPath:@"salary" context:NULL];
+		[self.monitoredEmployees removeObject:employee];
+	}
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
@@ -41,6 +42,12 @@
 	if ([keyPath isEqualToString:@"salary"]) {
 		LSIEmployee *employee = object;
 		NSLog(@"%@'s %@ is %@", employee.name, keyPath, [employee valueForKeyPath:keyPath]);
+	}
+}
+
+- (void)dealloc {
+	for (LSIEmployee *employee in self.monitoredEmployees) {
+		[self stopMonitoringEmployee:employee];
 	}
 }
 

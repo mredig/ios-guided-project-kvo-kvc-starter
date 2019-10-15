@@ -23,10 +23,19 @@
                                     <action selector="givePhilARaisePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UJs-jl-LdS"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qvw-jx-i8b">
+                                <rect key="frame" x="137.5" y="279" width="139" height="30"/>
+                                <state key="normal" title="Stop Monitoring Phil"/>
+                                <connections>
+                                    <action selector="stopMonitoringEmployee:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oXz-lU-4GV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kn5-wn-R7f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="102" id="4S1-Eq-f7F"/>
+                            <constraint firstItem="Qvw-jx-i8b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QTv-p7-0Cj"/>
+                            <constraint firstItem="Qvw-jx-i8b" firstAttribute="top" secondItem="kn5-wn-R7f" secondAttribute="bottom" constant="103" id="cS0-3j-JcK"/>
                             <constraint firstItem="kn5-wn-R7f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sEF-oo-4D3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
