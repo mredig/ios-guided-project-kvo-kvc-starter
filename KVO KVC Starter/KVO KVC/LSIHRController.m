@@ -46,5 +46,15 @@
     return output;
 }
 
+- (NSArray<LSIEmployee *> *)allEmployees {
+
+	NSMutableArray *allEmployees = [NSMutableArray array];
+	for (LSIDepartment *department in self.internalDepartments) {
+		[allEmployees addObjectsFromArray:department.employees];
+	}
+
+	return allEmployees;
+}
+
 
 @end

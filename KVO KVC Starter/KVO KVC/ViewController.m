@@ -67,8 +67,19 @@
     
     NSLog(@"%@", self.hrController);
     
-    
+
+	NSString *name = philSchiller.name;
+	NSLog(@"name: %@", name);
+
+	name = [philSchiller valueForKey:@"name"];
+	NSLog(@"name: %@", name);
+
+	[philSchiller setValue:@"Philip" forKey:@"name"];
+	name = [philSchiller valueForKey:@"name"];
+	NSLog(@"name: %@", name);
 }
+
+
 
 
 @end

@@ -15,9 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LSIHRController : NSObject
 
+@property (nonatomic, copy, readonly) NSArray<LSIDepartment *> *departments;
+
+
 - (void)addDepartment:(LSIDepartment *)department;
 
-@property (nonatomic, copy, readonly) NSArray<LSIDepartment *> *departments;
+- (NSArray<LSIEmployee *> *)allEmployees;
 
 @end
 
